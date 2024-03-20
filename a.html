@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+
+
+    <script>
+        trys = 0;
+        function update(){
+            
+            items = ['cube magic','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1','mp40','ak','gold','m4a1']
+            
+                console.log("tr"+trys)
+                n = Math.floor(Math.random() * items.length) ;// Generate a random number between 0 and 1 (inclusive)
+                item = items[n]
+                document.querySelector('#h1').innerHTML = item;
+                if(item == 'cube magic'){
+                    console.log('You  got cube magic! after ' + trys);
+                    trys = 0;
+                    
+                }else{
+                    trys++
+                    clearInterval()
+                }
+            
+        }
+        setInterval(()=>{
+            update();
+        },8)
+    </script>
+</body>
+</html>
